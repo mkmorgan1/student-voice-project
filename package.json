@@ -1,0 +1,42 @@
+{
+  "name": "student-voice-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run buildServer && node dist/index.js",
+    "build": "webpack --watch",
+    "cleanUp": "npx prettier --write .",
+    "dev": "nodemon --exec babel-node server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "buildServer": "babel server/index.js -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkmorgan1/student-voice-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mkmorgan1/student-voice-project/issues"
+  },
+  "homepage": "https://github.com/mkmorgan1/student-voice-project#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.5",
+    "@babel/node": "^7.14.5",
+    "@babel/preset-env": "^7.14.5",
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "prettier": "2.3.1",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "sass": "^1.34.1"
+  }
+}
